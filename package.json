@@ -1,0 +1,28 @@
+{
+  "name": "react-theme-octcms",
+  "version": "1.0.0",
+  "description": "A React.js theme for OctoberCMS.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack --config ./webpack.config.js",
+    "watch": " webpack --config ./webpack.config.js --watch"
+  },
+  "keywords": [
+    "react",
+    "octobercms"
+  ],
+  "author": "rich-97 <morenoricardo237@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
