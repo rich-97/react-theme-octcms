@@ -1,6 +1,13 @@
 ;;
 url = "/"
 ==
+use Rainlab\Blog\Models\Post;
+
+// Ajax handler for get the blog posts.
+function onGetBlogPosts() {
+  return Post::get();
+}
+==
 {##}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +17,14 @@ url = "/"
 </head>
 <body>
   <div id="root"></div>
+
+  <!-- Loading the jQuery library. -->
+  <script src="{{ ['node_modules/jquery/dist/jquery.min.js']|theme }}"></script>
+
+  <!-- The JS framework of Octobercms. -->
+  {% framework %}
+
+  <!-- The React app. -->
   <script src="{{ ['assets/js/bundle.js']|theme }}"></script>
 </body>
 </html>
