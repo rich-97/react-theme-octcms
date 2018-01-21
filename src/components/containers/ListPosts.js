@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import octRequest from '../../octRequest'
 
 class ListPosts extends Component {
   constructor(props) {
@@ -12,13 +13,13 @@ class ListPosts extends Component {
   componentDidMount() {
     const that = this
 
-    $.request('onGetBlogPosts', {
-      success(posts) {
-        if (posts.length) {
-          that.setState({ posts })
-        }
+    octRequest('onGetBlogPosts').then(function(response) {
+      const posts = response.data
+
+      if (posts.length) {
+        that.setState({ posts })
       }
-    })
+    })    
   }
 
   render() {
